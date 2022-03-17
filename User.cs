@@ -10,18 +10,20 @@ namespace UMLtoProject
     {
         public int Saldo { get; set; }
         public int PostalCode { get; set; }
-        public User(int saldo,int postalCode)
+        public string Name { get; private set; }
+        public User(string name,int saldo,int postalCode)
         {
             Saldo = saldo;
             PostalCode = postalCode;
+            Name = name;
         }
-        public User(int saldo) : this(saldo, 0)
+        public User(string name,int saldo) : this(name,saldo, 0)
         {
 
         }
         public string ReciveNotifikations(IVehicle vehicle,decimal amount)
         {
-            return $"{vehicle.Name}: {amount}";
+            return $":{vehicle.Name}: {amount}";
         }
     }
 }

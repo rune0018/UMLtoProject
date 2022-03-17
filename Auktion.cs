@@ -12,11 +12,13 @@ namespace UMLtoProject
         public int AuktionID { get; set; }
         public ISeller Seller { get; set; }
         public decimal MinBid { get; set; }
-        public Auktion(ISeller seller,decimal minbid)
+        public IVehicle Vehicle { get; set; }
+        public Auktion(ISeller seller,decimal minbid,IVehicle vehicle)
         {
             AuktionID = INC++;
             Seller = seller;
             MinBid = minbid;
+            Vehicle = vehicle;
         }
     }
 }
