@@ -42,10 +42,12 @@ namespace UMLtoProject
         }
         public static void ShowResults(List<Auktion> auk)
         {
-            foreach(Auktion a in auk)
+            Console.WriteLine("----------------------------");
+            foreach (Auktion a in auk)
             {
-                Console.WriteLine(a.AuktionID + " : " + a.Vehicle.Name + " : " + a.MinBid);
+                Console.WriteLine(a.AuktionID + " : " + a.Vehicle.Name + " : " + a.MinBid + " : "+ a.Seller);
             }
+            Console.WriteLine("============================");
         }
     }
 }

@@ -23,7 +23,12 @@ namespace UMLtoProject
         }
         public string ReciveNotifikations(IVehicle vehicle,decimal amount)
         {
-            return $":{vehicle.Name}: {amount}";
+            return $"{Name} : {vehicle.Name} : {amount}";
+        }
+
+        public override string ToString()
+        {
+            return Name;
         }
     }
 }
